@@ -1,0 +1,12 @@
+c:\users\user\source\repos\ProjetBaye_Sakila\ProjetBaye_Sakila\bin\Debug\ProjetBaye_Sakila.dll.config
+c:\users\user\source\repos\ProjetBaye_Sakila\ProjetBaye_Sakila\bin\Debug\ProjetBaye_Sakila.dll
+c:\users\user\source\repos\ProjetBaye_Sakila\ProjetBaye_Sakila\bin\Debug\ProjetBaye_Sakila.pdb
+c:\users\user\source\repos\ProjetBaye_Sakila\ProjetBaye_Sakila\bin\Debug\EntityFramework.dll
+c:\users\user\source\repos\ProjetBaye_Sakila\ProjetBaye_Sakila\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\user\source\repos\ProjetBaye_Sakila\ProjetBaye_Sakila\bin\Debug\EntityFramework.xml
+c:\users\user\source\repos\ProjetBaye_Sakila\ProjetBaye_Sakila\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\user\source\repos\ProjetBaye_Sakila\ProjetBaye_Sakila\obj\Debug\ProjetBaye_Sakila.csprojResolveAssemblyReference.cache
+c:\users\user\source\repos\ProjetBaye_Sakila\ProjetBaye_Sakila\obj\Debug\ProjetBaye_Sakila.csproj.CoreCompileInputs.cache
+c:\users\user\source\repos\ProjetBaye_Sakila\ProjetBaye_Sakila\obj\Debug\ProjetBaye_Sakila.csproj.CopyComplete
+c:\users\user\source\repos\ProjetBaye_Sakila\ProjetBaye_Sakila\obj\Debug\ProjetBaye_Sakila.dll
+c:\users\user\source\repos\ProjetBaye_Sakila\ProjetBaye_Sakila\obj\Debug\ProjetBaye_Sakila.pdb
