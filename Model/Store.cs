@@ -27,6 +27,6 @@ namespace ProjetBaye_Sakila.Model
 
 
         public ICollection<Staff> Staffs { get; set; }
-
+        public ICollection<Inventory>inventories { get; set; }
     }
 }

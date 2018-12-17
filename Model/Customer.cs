@@ -40,5 +40,8 @@ namespace ProjetBaye_Sakila.Model
 
         [DataMember]
         public DateTime Create_Date { get; set; }
+
+        public ICollection<Rental> Rentals { get; set; }
+        public ICollection<Payememt> payememts { get; set; }
     }
 }

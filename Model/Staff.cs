@@ -49,5 +49,8 @@ namespace ProjetBaye_Sakila.Model
         [DataMember]
          public string Password { get; set; }
 
+        public ICollection<Rental> Rentals { get; set; }
+        public ICollection<Payememt> payememts { get; set; }
+
     }
 }

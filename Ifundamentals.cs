@@ -42,8 +42,11 @@ namespace ProjetBaye_Sakila
 
         [OperationContract]
         void AddAddress(Address address);
-
-        
-
+        [OperationContract]
+        void UpdateStaff(int idStaff,int IdStore);
+        [OperationContract]
+        int LastId();
+        //[OperationContract]
+        //void GlobalAd(Object a);
     }
 }

@@ -16,6 +16,7 @@ namespace ProjetBaye_Sakila
         public void AddAddress(Address a)
         {
             Context.Adresses.Add(a);
+            
             Context.SaveChanges();
         }
 
@@ -81,6 +82,25 @@ namespace ProjetBaye_Sakila
         public ICollection<Store> GetStores()
         {
             return Context.Stores.ToList();
+        }
+
+        /*public void GlobalAdd<T>(T a)
+        {
+            Context.Set<Staff>.Add(a);
+        }*/
+
+      
+        public int LastId()
+        {
+            List<Store> s = Context.Stores.ToList();
+            return s[s.Count - 1].Store_ID;
+        }
+
+        public void UpdateStaff(int idStaff, int IdStore)
+        {
+            Staff s=Context.Staffs.Find(idStaff);
+            s.Store_ID = IdStore;
+            Context.SaveChanges();
         }
     }
 }

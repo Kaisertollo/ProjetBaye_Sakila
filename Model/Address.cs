@@ -32,7 +32,6 @@ namespace ProjetBaye_Sakila.Model
 
         [DataMember]       
         public int? City_ID { get; set; }
-        
         public City City { get; set; }
 
         [Timestamp]
