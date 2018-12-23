@@ -1,4 +1,5 @@
 ﻿using ProjetBaye_Sakila.Model;
+using PROJETBAYE2018.Modeltest;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,38 +15,49 @@ namespace ProjetBaye_Sakila
     {
         [OperationContract]
         void Ajouter();
-
-        [OperationContract]
-        ICollection<Store> GetStores();
-
+      
         [OperationContract]
         ICollection<Country> GetCountries();
-
-        [OperationContract]
-        ICollection<Staff> GetStaffs();
-
         [OperationContract]
         ICollection<City> GetCities();
-
         [OperationContract]
         ICollection<Address> GetAddresses();
 
-
         [OperationContract]
         void AddStores(Store store);
-
         [OperationContract]
-        void AddStaff(Staff staff);
-
+        ICollection<Store> GetStores();
         [OperationContract]
-       string AddStaff2(Staff staff);
+        void UpdateStaff_Store(int idStaff, int IdStore);
+        
+
+        /// <summary>
+        /// Staff
+        /// </summary>
+        /// <returns></returns>
+        [OperationContract]
+        ICollection<Staff> GetStaffs();
+        [OperationContract]
+        string AddStaff2(Staff staff);
+        [OperationContract]
+        void UpdateStaff(Staff S,int id);
+        [OperationContract]
+        void Block(int id);
+        [OperationContract]
+        void DeBlock(int id);
+      
 
         [OperationContract]
         void AddAddress(Address address);
+       
         [OperationContract]
-        void UpdateStaff(int idStaff,int IdStore);
+        int LastIdStore();
+
         [OperationContract]
-        int LastId();
+        ICollection<Film>GetFilms();
+
+      
+       
         //[OperationContract]
         //void GlobalAd(Object a);
     }

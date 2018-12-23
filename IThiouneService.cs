@@ -31,6 +31,27 @@ namespace ProjetBaye_Sakila
         List<Film> Film_Par_Acteur(string act);
         [OperationContract]
         List<Film> Film_Par_Langue(string langue);
+        [OperationContract]
+        ICollection<Film> GetFilms();
 
+        [OperationContract]
+        ICollection<Language> GetLang();
+
+        [OperationContract]
+        ICollection<Category> GetCat();
+
+        [OperationContract]
+        ICollection<Actor> GetActor();
+
+        [OperationContract]
+        void ajouterActor(Actor fa);
+        [OperationContract]
+        int LastIdFilm();
+
+        [OperationContract]
+        void AddFilms(Film F,List<Actor>Actor, List<Category> Category);
+
+        [OperationContract]
+        void AddActors(Actor A, ICollection<Film> F);
     }
 }

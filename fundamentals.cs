@@ -1,4 +1,5 @@
 ﻿using ProjetBaye_Sakila.Model;
+using PROJETBAYE2018.Modeltest;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,17 +16,20 @@ namespace ProjetBaye_Sakila
 
         public void AddAddress(Address a)
         {
-            Context.Adresses.Add(a);
-            
-            Context.SaveChanges();
+            try
+            {
+                Context.Adresses.Add(a);
+                Context.SaveChanges();
+            }
+            catch (Exception e)
+            {
+
+                throw;
+            }
         }
 
-        public void AddStaff(Staff staff)
-        {
-            Context.Staffs.Add(staff);
-            Context.SaveChanges();
-        }
-
+      
+        //STAFF
         public string AddStaff2(Staff staff)
         {
             try
@@ -40,13 +44,90 @@ namespace ProjetBaye_Sakila
                 return e.Message;
             }
         }
+        public void Block(int id)
+        {
+            try
+            {
+                Staff S = Context.Staffs.Find(id);
+                S.Active = 0;
+                Context.SaveChanges();
+            }
+            catch (Exception)
+            {
 
+                throw;
+            }
+        }
+        public void DeBlock(int id)
+        {
+            try
+            {
+                Staff S = Context.Staffs.Find(id);
+                S.Active = 1;
+                Context.SaveChanges();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
         public void AddStores(Store store)
         {
             Context.Stores.Add(store);
             Context.SaveChanges();
         }
+        public ICollection<Staff> GetStaffs()
+        {
+            return Context.Staffs.ToList();
+        }
+        public void UpdateStaff(Staff S, int id)
+        {
+            try
+            {
+                Staff s = Context.Staffs.Find(id);
+                s = S;
+                Context.SaveChanges();
+            }
+            catch (Exception)
+            {
 
+                throw;
+            }
+        }
+
+        //STORE
+        public ICollection<Store> GetStores()
+        {
+            try
+            {
+                return Context.Stores.ToList();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+        public void UpdateStaff_Store(int idStaff, int IdStore)
+        {
+            try
+            {
+                Staff s = Context.Staffs.Find(idStaff);
+                s.Store_ID = IdStore;
+                Context.SaveChanges();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+        public int LastIdStore()
+        {
+            List<Store> s = Context.Stores.ToList();
+            return s[s.Count - 1].Store_ID;
+        }
         public void Ajouter()
         {
 
@@ -59,6 +140,11 @@ namespace ProjetBaye_Sakila
             //}
         }
 
+        
+        /// <summary>
+        /// ADRESSE 
+        /// </summary>
+        /// <returns></returns>
         public ICollection<Address> GetAddresses()
         {
             return Context.Adresses.ToList();
@@ -74,33 +160,23 @@ namespace ProjetBaye_Sakila
             return Context.Countries.ToList();
         }
 
-        public ICollection<Staff> GetStaffs()
+
+
+        public ICollection<Film> GetFilms()
         {
-            return Context.Staffs.ToList();
+            return Context.Films.ToList();
         }
 
-        public ICollection<Store> GetStores()
-        {
-            return Context.Stores.ToList();
-        }
+      
+
 
         /*public void GlobalAdd<T>(T a)
         {
             Context.Set<Staff>.Add(a);
         }*/
 
-      
-        public int LastId()
-        {
-            List<Store> s = Context.Stores.ToList();
-            return s[s.Count - 1].Store_ID;
-        }
 
-        public void UpdateStaff(int idStaff, int IdStore)
-        {
-            Staff s=Context.Staffs.Find(idStaff);
-            s.Store_ID = IdStore;
-            Context.SaveChanges();
-        }
+
+
     }
 }

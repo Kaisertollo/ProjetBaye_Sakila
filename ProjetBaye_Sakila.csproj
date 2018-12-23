@@ -54,6 +54,7 @@
     <Compile Include="fundamentals.cs" />
     <Compile Include="Ifundamentals.cs" />
     <Compile Include="IService1.cs" />
+    <Compile Include="IThiouneService.cs" />
     <Compile Include="Model\Actor.cs" />
     <Compile Include="Model\Address.cs" />
     <Compile Include="Model\Category.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SakilaContext.cs" />
     <Compile Include="Service1.cs" />
+    <Compile Include="ThiouneService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
